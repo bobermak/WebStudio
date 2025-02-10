@@ -1,0 +1,117 @@
+/* Стилізуємо заголовок h3 з текстом "Пофарбуйте мене в рожевий колір" */
+.text-box h3:first-of-type {
+  color: pink;
+}
+
+/* Стилізуємо p з id "greycol" */
+#greycol {
+  color: grey;
+}
+
+/* Стилізуємо p з класом "yellow" */
+.yellow {
+  color: yellow;
+}
+
+/* Стилізуємо p, що знаходиться всередині div (це буде <p> з текстом "Пофарбуйте мене в червоний колір") */
+.text-box div p {
+  color: red;
+}
+
+/* Стилізуємо p з текстом "Пофарбуйте мене в зелений колір" */
+.text-box p:not(.yellow):not(#greycol):not(:first-of-type) {
+  color: green;
+}
+
+/* Загальний стиль контейнера */
+.schedule-container {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* Стиль для кожного списку, пофарбовані в різні кольори */
+.monday {
+  color: white;
+  background-color: #ff7f7f;
+}
+
+.tuesday {
+  color: white;
+  background-color: #7fbbff;
+}
+
+.wednesday {
+  color: white;
+  background-color: #7fff7f;
+}
+
+.thursday {
+  color: white;
+  background-color: #ffeb3b;
+}
+
+.friday {
+  color: white;
+  background-color: #ff9800;
+}
+
+/* Стилі для елементів списку */
+li {
+  padding: 10px;
+  list-style-type: none;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Псевдокласи стану */
+li:hover {
+  background-color: #444;
+  transform: scale(1.05);
+}
+
+li:focus {
+  outline: 2px solid #000;
+}
+
+li:active {
+  background-color: #333;
+}
+
+li:checked {
+  background-color: #8bc34a;
+}
+
+li:disabled {
+  background-color: #d3d3d3;
+  color: #888;
+}
+
+/* Псевдокласи структури */
+ul:first-of-type li {
+  font-weight: bold;
+}
+
+ul:last-of-type li {
+  text-decoration: underline;
+}
+
+ul:not(.friday) li:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+
+ul:nth-of-type(2) li:nth-child(2) {
+  color: #d32f2f;
+}
+
+ul.monday li:nth-of-type(3) {
+  color: #ffeb3b;
+}
