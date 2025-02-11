@@ -1,0 +1,27 @@
+:root {
+    /* Основні кольори */
+    --primary-color: #007bff; /* Синій */
+    --secondary-color: #6c757d; /* Сірий */
+    --background-color: #f4f4f4; /* Світлий фон */
+    --text-color: #333333; /* Темний текст */
+    --accent-color: #ff5733; /* Колір акценту */
+}
+
+/* Приклад використання змінних */
+body {
+    background-color: var(--background-color); /* Використовуємо змінну для фону */
+    color: var(--text-color); /* Використовуємо змінну для тексту */
+}
+
+a {
+    color: var(--primary-color); /* Синій для посилань */
+}
+
+button {
+    background-color: var(--primary-color); /* Кнопка з основним кольором */
+    color: white; /* Білий текст */
+}
+
+button:hover {
+    background-color: var(--accent-color); /* Колір акценту при наведенні */
+}
