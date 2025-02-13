@@ -1,4 +1,4 @@
-:root {
+ :root {
     /* Основні кольори */
     --primary-color: #007bff; /* Синій */
     --secondary-color: #6c757d; /* Сірий */
@@ -24,4 +24,11 @@ button {
 
 button:hover {
     background-color: var(--accent-color); /* Колір акценту при наведенні */
+}
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6; /* або будь-яке інше значення */
+}
+h1 {
+  line-height: 1.5; /* 24px / 16px = 1.5 */
 }
