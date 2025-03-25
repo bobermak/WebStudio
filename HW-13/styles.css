@@ -529,7 +529,7 @@ body {
     cursor: pointer;
     font-size: 16px;
 }
-/* Команда */
+
 .team {
     margin-bottom: 40px;
     text-align: center;
@@ -573,4 +573,83 @@ body {
 .team-item p {
     font-size: 14px;
     color: #777;
+}
+
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: center; 
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+
+.portfolio-item {
+    flex-basis: calc(33.333% - 20px); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+@media (max-width: 768px) {
+    .portfolio-item {
+        flex-basis: calc(50% - 20px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-item {
+        flex-basis: 100%; 
+    }
+}
+.blocks {
+    display: grid;
+    grid-template-areas: 
+        "b1 b1 b5 b5"
+        "b3 b2 b4 b4";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 100px);
+    gap: 5px;
+    max-width: 500px;
+    margin: 20px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 5px solid black;
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+.block-1 { background-color: #ff6b5b; grid-area: b1; }
+.block-2 { background-color: #4a90e2; grid-area: b2; }
+.block-3 { background-color: #673ab7; grid-area: b3; }
+.block-4 { background-color: #2e7d32; grid-area: b4; }
+.block-5 { background-color: #f5a623; grid-area: b5; }
+
+.block:first-child {
+    border-top-left-radius: 20px;
+}
+
+.block:last-child {
+    border-top-right-radius: 20px;
 }
